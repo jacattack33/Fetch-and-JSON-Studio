@@ -7,7 +7,14 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <script src="script.js">
+      window.addEventListener("load", function(){
+        fetch("https://handlers.education.launchcode.org/static/astronauts.json").then(function(response){
+          response.json().then(function(json) {
+          });
+        });
+      });
+    </script>
     <h1>Astronauts</h1>
     <div id="container">
         <!-- List of astronauts will be added here dynamically -->
